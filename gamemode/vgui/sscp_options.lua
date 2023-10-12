@@ -3,7 +3,7 @@ function GM:WelcomeScreen()
     local s = TrueScreenScale()
 
     local frame = vgui.Create("DFrame")
-    frame:SetSize(600 * s, 600 * s)
+    frame:SetSize(ScrW(), ScrH())
     frame:SetTitle("")
     frame:SetDraggable(false)
     frame:Center()

@@ -1,19 +1,23 @@
-function draw.PaintFrame(self, w, h)
+function draw.PaintFrame(self, w, h, outline)
     draw.Blur(self, w, h)
 
     surface.SetDrawColor(0, 0, 0, 200)
     surface.DrawRect(0, 0, w, h)
 
+    if not outline then return end
+
     surface.SetDrawColor(0, 0, 0)
     surface.DrawOutlinedRect(0, 0, w, h)
 end
 
-function draw.PaintButton(self, w, h)
+function draw.PaintButton(self, w, h, outline)
     draw.Blur(self, w, h)
 
 	if self:GetDisabled() then
         surface.SetDrawColor(100, 0, 0, 180)
         surface.DrawRect(0, 0, w, h)
+
+        if not outline then return end
     
         surface.SetDrawColor(200, 0, 0)
         surface.DrawOutlinedRect(0, 0, w, h)
@@ -27,6 +31,8 @@ function draw.PaintButton(self, w, h)
 
     surface.SetDrawColor(0, 0, 0, 180)
     surface.DrawRect(0, 0, w, h)
+
+    if not outline then return end
 
     surface.SetDrawColor(0, 0, 0)
     surface.DrawOutlinedRect(0, 0, w, h)
