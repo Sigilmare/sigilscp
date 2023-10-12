@@ -1,5 +1,6 @@
-function TrueScreenScale(type)
-	if type == "w" then
+-- True for Width scaling, false for Height scaling
+function TrueScreenScale(bool)
+	if bool then
 		return ScrW() / 1920
 	else
     	return ScrH() / 1080

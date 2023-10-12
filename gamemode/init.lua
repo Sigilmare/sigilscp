@@ -22,6 +22,7 @@ end
 
 function GM:PlayerSay(ply, text, teamchat)
     ply:SendLua("GAMEMODE:WelcomeScreen()")
+    BroadcastLua([[GAMEMODE:CreateScalingFonts()]])
     net.Start("SCP.PlayerChat")
         net.WriteEntity(ply)
         net.WriteString(text)

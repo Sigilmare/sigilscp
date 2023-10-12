@@ -11,3 +11,14 @@ include("cl_framework.lua")
 include("cl_net.lua")
 
 include("vgui/sscp_options.lua")
+
+function GM:Initialize()
+    self:CreateScalingFonts()
+end
+
+local fontfamily = "Arial" -- placeholder
+function GM:CreateScalingFonts()
+    local screenscale = TrueScreenScale()
+
+    surface.CreateFont("SCPHUDFontBig", {size = 72 * screenscale,weight = 500, antialias = true, outlined = true})
+end
