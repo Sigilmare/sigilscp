@@ -14,7 +14,7 @@ function GM:WelcomeScreen()
 
     local button = vgui.Create("DButton", frame)
     button:SetText("Gamemode Rules")
-    button:SetFont("GModNotify")
+    button:SetFont("SCPHUDFontBig")
     button:SetTextColor(Color(255, 255, 255))
     button:SizeToContents()
     button:CenterHorizontal()

@@ -4,6 +4,8 @@ DEFINE_BASECLASS("gamemode_sandbox")
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 
+AddCSLuaFile("sh_globals.lua")
+
 AddCSLuaFile("cl_util.lua")
 AddCSLuaFile("cl_framework.lua")
 AddCSLuaFile("cl_net.lua")
@@ -18,6 +20,7 @@ end
 
 function GM:AddNetworkStrings()
     util.AddNetworkString("SCP.PlayerChat")
+    util.AddNetworkString("SCP.PlayerNoclip")
 end
 
 function GM:PlayerSay(ply, text, teamchat)
