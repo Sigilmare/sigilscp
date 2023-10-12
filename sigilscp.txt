@@ -1,0 +1,8 @@
+"sigilscp"
+{
+	"base"		"sandbox"
+	"title"		"Sigilmare's Site-19 Roleplay"
+	"category"	"rp"
+	"maps"		"^rp_|^gm_"
+	"menusystem"	"1"
+}
