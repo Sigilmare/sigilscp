@@ -20,5 +20,5 @@ local fontfamily = "Arial" -- placeholder
 function GM:CreateScalingFonts()
     local screenscale = TrueScreenScale()
 
-    surface.CreateFont("SCPHUDFontBig", {size = 72 * screenscale,weight = 500, antialias = true, outlined = true})
+    surface.CreateFont("SCPHUDFontBig", {font = fontfamily, size = 72 * screenscale, weight = 500, antialias = true, outlined = true})
 end
