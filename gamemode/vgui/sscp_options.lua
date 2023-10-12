@@ -6,7 +6,7 @@ function GM:WelcomeScreen()
     frame:SetSize(600 * s, 600 * s)
     frame:SetTitle("")
     frame:SetDraggable(false)
-    frame:CenterHorizontal()
+    frame:Center()
     frame:MakePopup()
     frame.Paint = function(self, w, h) -- Todo: Dermaskin for the gamemode
         draw.PaintFrame(self, w, h)
@@ -15,16 +15,19 @@ function GM:WelcomeScreen()
     local button = vgui.Create("DButton", frame)
     button:SetText("Placeholder")
     button:SetFont("GModNotify")
+    button:SetTextColor(Color(255, 255, 255))
     button:SizeToContents()
-    local bw, bh = button:GetSize()
-    button:Center()
+    button:CenterHorizontal()
+    button:CenterVertical(0.3)
+    button:SetEnabled(true)
     button.Paint = function(self, w, h)
         draw.PaintButton(self, w, h)
     end
-    button.OnCursorEntered = function()
+    button.OnCursorEntered = function(self)
+        if self:GetDisabled() then return end
         sound.ButtonHover()
     end
     button.DoClick = function()
-        sound.Button("close")
+        sound.Button()
     end
 end
