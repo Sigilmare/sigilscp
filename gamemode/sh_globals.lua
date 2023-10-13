@@ -13,6 +13,9 @@ DEFAULT_WALKSPEED = 100
 DEFAULT_RUNSPEED = 160
 
 TEAM_SHORT_NAMES = {
+    [0] = "Connecting",
+    [1001] = "Unassigned",
+    [1002] = "Spectator",
     [TEAM_CHAOS] = "Chaos",
     [TEAM_CLASSD] = "CD",
     [TEAM_SCIENTIFICDEPARTMENT] = "ScD",
