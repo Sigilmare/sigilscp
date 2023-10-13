@@ -34,4 +34,6 @@ function GM:HUDShouldDraw(name)
     if toHide[name] then
         return false
     end
+
+    return true
 end
