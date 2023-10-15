@@ -33,3 +33,14 @@ function GM:PlayerSay(ply, text, teamchat)
     net.Broadcast()
     return false
 end
+
+function GM:PlayerSpawn(pl)
+    if pl:Team() == TEAM_CLASSD then
+        pl:SetWalkSpeed(DEFAULT_WALKSPEED)
+        pl:SetRunSpeed(DEFAULT_RUNSPEED)
+        pl:SetCrouchedWalkSpeed(0.45)
+        pl:SetupHands()
+    end
+
+    return true
+end

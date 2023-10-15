@@ -17,10 +17,18 @@ function GM:Initialize()
 end
 
 local fontfamily = "Arial" -- placeholder
+local fontweight = 0
 function GM:CreateScalingFonts()
     local screenscale = TrueScreenScale()
 
-    surface.CreateFont("SCPHUDFontBig", {font = fontfamily, size = 72 * screenscale, weight = 500, antialias = true, outlined = true})
+    surface.CreateFont("SCPHUDFontBiggest", {font = fontfamily, size = 84 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontBigger", {font = fontfamily, size = 72 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontBigg", {font = fontfamily, size = 60 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFont", {font = fontfamily, size = 42 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontSmall", {font = fontfamily, size = 28 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontSmaller", {font = fontfamily, size = 24 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontSmallest", {font = fontfamily, size = 20 * screenscale, weight = fontweight, antialias = true, outline = true})
+    surface.CreateFont("SCPHUDFontTiny", {font = fontfamily, size = 16 * screenscale, weight = fontweight, antialias = true, outline = true})
 end
 
 local toHide = {
